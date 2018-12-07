@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <script src="prism/min/prism-min.js"></script>
+  <script src="prism/prism.js"></script>
 
   <header>
 
@@ -60,7 +60,7 @@ public string GetUsername(int id)
   };
 
   // This executes as "SELECT [FirstName] FROM [Users] WHERE [UserID] = @P1"
-  var user = command.Fetch<User>();
+  var user = command.Fetch&lt;User&gt;();
 
   return user.FirstName;
 }
