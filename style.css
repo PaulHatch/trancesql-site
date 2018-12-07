@@ -75,3 +75,16 @@ footer {
   text-align: right;
   font-size: small;
 }
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  display: inline-block;
+  content: "\2022";
+  color: #21d4fd;
+  font-weight: bold;
+  width: 1em;
+  margin-left: -1em;
+}
