@@ -14,7 +14,7 @@ body {
 }
 
 header img {
-  width: 100px;  
+  width: 100px;
   margin-top: 20px;
 }
 
@@ -39,33 +39,39 @@ header {
 }
 
 .button-row a:hover {
-  opacity: .8;
-  
+  opacity: 0.8;
 }
 
 .hero {
-  color: #FFF;
-  text-align: center;  
+  color: #fff;
+  text-align: center;
 }
-
 
 .filled-button {
   color: #116f85;
-  background-color: #FFFFFF;  
+  background-color: #ffffff;
 }
 
 .hollow-button {
   color: #fff;
-  background-color: #FFFFFF30;  
+  background-color: #ffffff30;
 }
 
 section {
   max-width: 800px;
-  padding: 0 10px;
-  margin: 0 auto;  
+  padding: 10px;
+  margin: 0 auto;
 }
 
-pre {
-  background: #494d55;
-  padding: 10px;
+.tint {
+  background: #F5F5F5;
+  color: #000;
+}
+
+footer {
+  padding: 15px;
+  background: #333;
+  color: #EEE;
+  text-align: right;
+  font-size: small;
 }
