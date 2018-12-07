@@ -3,7 +3,6 @@
 
 <head>
   <title>TranceSQL</title>
-  <!-- Meta -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,87 +11,41 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link rel="icon" type="image/png" href="favicon.png" />
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
-    rel='stylesheet' type='text/css'>
-  <!-- FontAwesome JS -->
-  <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a"
-    crossorigin="anonymous"></script>
-  <!-- Global CSS -->
-  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
-  <!-- Plugins CSS -->
-  <link rel="stylesheet" href="plugins/elegant_font/css/style.css">
-  <!-- Theme CSS -->
-  <link id="theme-style" rel="stylesheet" href="css/styles.css">
+  <link id="theme-style" rel="stylesheet" href="style.css">
 
-  <link rel="stylesheet" href="plugins/prism/prism.css">
-
+  <link rel="stylesheet" href="prism/prism.css">
 </head>
 
-<body class="body-pink">
+<body>
+  <script src="prism/min/prism-min.js"></script>
 
-  <!-- GITHUB BUTTON JS -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <header>
 
-  <div class="page-wrapper">
-
-    <!-- ******Header****** -->
-    <header class="header text-center">
-      <div class="container">
-        <div class="branding">
-          <img alt="TranceSQL logo" title="" width="50px" src="logo.png">
-          <h3 style="text-transform: none;margin-left:15px; display: inline-block">TranceSQL</h3>
-        </div>
-        <!--//branding-->
-        <div class="tagline">
-          <p>A lightweight .NET client library for SQL databases</p>
-        </div>
-        <!--//tagline-->
-        <div class="social-container">
-          <!-- Replace with your Github Button -->
-          <div class="github-btn mb-2">
-            <a class="github-button" href="https://github.com/PaulHatch/trancesql" data-size="large" aria-label="PaulHatch/trancesql on GitHub">TranceSQL
-              on GitHub</a><br>
-              <a href="https://www.nuget.org/packages/TranceSql/" rel="nofollow">
-                <img src="https://camo.githubusercontent.com/f327af1026d1d8d3ba34e3effacd78b317bbdd59/68747470733a2f2f696d672e736869656c64732e696f2f6e756765742f762f5472616e636553716c2e7376673f7374796c653d666c61742d737175617265"
-                    alt="NuGet version (TranceSql)" data-canonical-src="https://img.shields.io/nuget/v/TranceSql.svg?style=flat-square"
-                    style="max-width:100%;"></a>
-          </div>
-        </div>
-        <!--//social-container-->
+    <div class="hero">
+      <img src="logo.png" alt="TranceSQL logo" title="" />
+      <div>
+        <h1>TranceSQL</h1>
+        <p>A lightweight .NET client library for SQL databases</p>
       </div>
-      <!--//container-->
-    </header>
-    <!--//header-->
-    
-    <section class="cards-section text-center">
-      <div class="container">
-        <h2 class="title">Simplified SQL Access for .NET</h2>
-        <div class="intro">
-          <p>
-            TranceSQL provides an easy to use, high performance data access interface for SQL databases. It
-            allows you to create SQL queries in an API which closely resembles the final SQL query and provides
-            execution and result object mapping.
-          </p>
-
-          <p>
-            As there are differences between different dialects of SQL, for example SQL Server uses the TOP
-            keyword to indicate the maximum number of rows to return from a SELECT, whereas other vendors
-            use LIMIT or require specialized WHERE clauses. TranceSQL provides platform specific drivers
-            to render compatible SQL code for several dialects:
-          </p>
-          <ul style="text-align: left">
-            <li>Postgres</li>
-            <li>Microsoft SQL Server</li>
-            <li>Sqlite</li>
-            <li>MySQL</li>
-            <li>Oracle</li>
-          </ul>
-
-        <p>
-          TranceSQL supports <a href="https://opentracing.io/">OpenTracing</a>
-        </p>
-
-        <pre><code class="language-csharp">
+    </div>
+    <div class="button-row">
+      <a class="filled-button" href="https://github.com/PaulHatch/trancesql" aria-label="TranceSQL on GitHub">
+        GitHub</a>
+      <a class="hollow-button" href="https://github.com/PaulHatch/trancesql/wiki" aria-label="TranceSQL Wiki">
+        Documentation</a>
+    </div>
+  </header>
+  <section>
+    <h2>Simplified SQL Access for .NET</h2>
+    <div>
+      <p>
+        TranceSQL provides an easy to use, high performance data access interface for SQL databases. It
+        allows you to create SQL queries in an API which closely resembles the final SQL query and provides
+        execution and result object mapping.
+      </p>
+    </div>
+    <h3>Example</h3>
+    <pre><code class="language-csharp">
 public string GetUsername(int id)
 {
   var database = new SqlServerDatabase(connectionString);
@@ -113,35 +66,6 @@ public string GetUsername(int id)
 }
           </code></pre>
 
-
-        </div>
-
-      </div>
-      <!--//container-->
-    </section>
-    <!--//cards-section-->
-  </div>
-  <!--//page-wrapper-->
-
-  <footer class="footer text-center">
-    <div class="container">
-      <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
-      <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/"
-          target="_blank">Xiaoying Riley</a> for developers</small>
-
-    </div>
-    <!--//container-->
-  </footer>
-  <!--//footer-->
-
-
-  <!-- Main Javascript -->
-  <script type="text/javascript" src="plugins/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="plugins/stickyfill/dist/stickyfill.min.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
-  <script type="text/javascript" src="plugins/prism/prism.js"></script>
-
+  </section>
 </body>
-
 </html>
